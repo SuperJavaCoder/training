@@ -1,3 +1,12 @@
+/*
+Let's represent the numbers as segments, initially there is just one segment 1-1e9.(we added 0-0 and 1e9+1-1e9+1 for borders)
+When moving a number, we first find the segment that it belongs to using std::set. Then, we break it from its segment,
+making it a free number (that no other segment is connected to). Then, find the segment the target position belongs to,
+and break it too, then connect it using the variable (bef and aft) in the struct 'segment'. After all operation has been done,
+we will get the final graph representing the answer. The final step is answering the queries using two pointers technique.
+The complexity is O(NlogN) for construction and O(N) for answering the queries.
+
+*/
 //fold
 #ifndef KHALIL
 #include <bits/stdc++.h>
